@@ -1,14 +1,11 @@
 
-// Declaring the fundamental game variables
+
 var scores, roundScore, activePlayer, gamePlaying;
 
-// Initilizing the game 
 init();
 
-// Adding an event listener to the button that makes the dice roll (using an anonymous function)
 document.querySelector('.btn-roll').addEventListener('click', function(){
-    
-    // Checking if the game is being played
+
     if(gamePlaying) {
 
         // 1. Create a random number for the dice
@@ -129,31 +126,8 @@ function nextPlayer() {
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
 
-    // Example of removing a class using the remove method 
-    // document.querySelector('.player-0-panel').classList.remove('active');
-    // Example of adding a class using the add method 
-    // document.querySelector('.player-1-panel').classList.add('active');
-
     // Hiding the dice after the active player changes 
     document.querySelector('.dice').style.display = 'none';
 
 }
 
-/****************/
-/* EXAMPLE CODE */
-/****************/
-
-// The 'innerHTML' method is used if we want to change the style of text using HTML (setter) 
-// document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
-
-// The 'textContent' method don't set HTML, just plain text (setter)
-// document.querySelector('#current-' + activePlayer).textContent = dice;
-
-// Example of reading the content of an element and storing it on a variable (getter)
-// var x = document.querySelector('#score-0').textContent;
-// console.log(x);
-
-// Example of removing a class using the remove method 
-// document.querySelector('.player-0-panel').classList.remove('active');
-// Example of adding a class using the add method 
-// document.querySelector('.player-1-panel').classList.add('active');
